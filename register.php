@@ -15,8 +15,8 @@ if ($conn->connect_error) {
 // Enable error reporting
 error_reporting(E_ALL);
 
-// Include the add_users.php script
-require_once('add_users.php');
+// Include the add_user.php script
+require_once('add_user.php');
 
 // Check if the form was submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
