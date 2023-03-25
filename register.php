@@ -2,7 +2,7 @@
 $servername = "fdb1030.awardspace.net";
 $username = "4285564_site";
 $password = "09H/#Igz2{Gi643S";
-$dbname = "4285564_asdasd";
+$dbname = "4285564_site";
 
 // Creating a connection
 $conn = new mysqli($servername, $username, $password, $dbname);
