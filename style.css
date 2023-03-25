@@ -1,0 +1,534 @@
+html,body{
+  font-family:Helvetica, sans-serif;
+  background-color: rgb(63, 62, 62);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+header {
+  position:fixed;
+  z-index:1;
+}
+
+h1 {
+  font-size: 30px;
+  color: rgb(236, 236, 236);
+  margin: 0;
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+p {
+  font-size: 38px;
+  line-height: 1.5;
+}
+
+.video{
+  position: fixed;
+  top:0px;
+  left:0px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 5%;
+}
+@media only screen and (max-width: 1920px) and (max-height: 1080px) {
+  .link {
+    font-size: 2vw; /* Use viewport width for responsive font size */
+    position: fixed; /* Change from fixed to absolute */
+    top:0px;
+    left: 10px;
+    z-index: 3;
+    color: white;
+    opacity: 0;
+  animation: fade-in 1s forwards 1s;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+}
+}
+.link_2 {
+  font-size: 2vw; /* Use viewport width for responsive font size */
+  position: fixed; /* Change from fixed to absolute */
+  top:0px;
+  left: 150px;
+  z-index: 3;
+  color: white;
+  opacity: 0;
+animation: fade-in 1s forwards 1s;
+}
+
+@keyframes fade-in {
+0% {
+  opacity: 0;
+}
+100% {
+  opacity: 1;
+}
+}
+.link_3 {
+  font-size: 2vw; /* Use viewport width for responsive font size */
+  position: fixed; /* Change from fixed to absolute */
+  top:0px;
+  left: 830px;
+  z-index: 3;
+  color: white;
+  opacity: 0;
+animation: fade-in 1s forwards 1s;
+}
+
+@keyframes fade-in {
+0% {
+  opacity: 0;
+}
+100% {
+  opacity: 1;
+}
+
+
+  }
+  .text-center {
+    font-size: 4vw; /* Use viewport width for responsive font size */
+    position: fixed; /* Change from fixed to absolute */
+    top:0px;
+    left: 700px;
+    transform: translateY(480px);
+    animation: move-down 1s ease-out; /* Add animations to the text */
+    animation-fill-mode: forwards; /* Keep the final position after animation ends */
+    margin-top: -20vw;
+  }
+
+
+@keyframes move-down {
+    0% {
+        transform: translateY(-10vw);
+    }
+    50% {
+        transform: translateY(1px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+}
+  .snake {
+    width: 190px;
+    height: 190px;
+    transform: translate(450%, 300%);
+    z-index: 2;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    animation: scale 2s ease-in-out infinite;
+  }
+  
+  @keyframes scale {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+    .dota {
+      width: 190px;
+      height: 190px;
+      transform: translate(450%, 300%);
+      z-index: 2;
+      position: fixed;
+      top: 50%;
+      left: 20%;
+      animation: scale 2s ease-in-out infinite;
+    }
+    
+    @keyframes scale {
+      0% {
+        transform: translate(-50%, -50%) scale(1);
+      }
+      50% {
+        transform: translate(-50%, -50%) scale(1.2);
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+    .block_destroyer {
+      width: 190px;
+      height: 190px;
+      transform: translate(450%, 300%);
+      z-index: 2;
+      position: fixed;
+      top: 50%;
+      left: 80%;
+      animation: scale 2s ease-in-out infinite;
+    }
+    
+    @keyframes scale {
+      0% {
+        transform: translate(-50%, -50%) scale(1);
+      }
+      50% {
+        transform: translate(-50%, -50%) scale(1.2);
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+  .line {
+    position: fixed;
+  left: 0px;
+  top: 0px;
+  height: 400px;
+  width: 1920px;
+  transform: translateY(-200px);
+  margin-top: -150px;
+  animation: move-down 1s ease-out;
+}
+
+@keyframes move-down {
+  0% {
+    transform: translateY(-10vw);
+  }
+  50% {
+    transform: translateY(60px);
+  }
+  }
+  @media only screen and (width: 1680px) and (height: 1050px) {
+    .text-center {
+      transform: translate(450%, 300%);
+      z-index: 2;
+      position: fixed;
+      top:-40px;
+      left: 645px;
+      font-size: 60px;
+      transform: translateY(480px);
+      animation: move-down 1s ease-out;
+      margin-top: -20vw;
+    }
+  
+    @keyframes move-down {
+      0% {
+        transform: translateY(-10vw);
+      }
+      50% {
+        transform: translateY(1px);
+      }
+    }
+    }
+    
+    .game {
+      width: 190px;
+      height: 190px;
+      transform: translate(450%, 300%);
+      z-index: 2;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      animation: scale 2s ease-in-out infinite;
+    }
+    
+    @keyframes scale {
+      0% {
+        transform: translate(-50%, -50%) scale(1);
+      }
+      50% {
+        transform: translate(-50%, -50%) scale(1.2);
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+    .line {
+      position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 400px;
+    width: 1920px;
+    transform: translateY(-200px);
+    margin-top: -150px;
+    animation: move-down 1s ease-out;
+  }
+  
+  @keyframes move-down {
+    0% {
+      transform: translateY(-10vw);
+    }
+    50% {
+      transform: translateY(60px);
+    }
+    }
+    
+    @media only screen and (width: 1600px) and (height: 900px) {
+      .text-center {
+        transform: translate(450%, 300%);
+        z-index: 2;
+        position: fixed;
+        top:-60px;
+        left: 610px;
+        font-size: 60px;
+        transform: translateY(480px);
+        animation: move-down 1s ease-out;
+        margin-top: -20vw;
+      }
+    
+      @keyframes move-down {
+        0% {
+          transform: translateY(-10vw);
+        }
+        50% {
+          transform: translateY(1px);
+        }
+      }
+      }
+      
+      .game {
+        width: 190px;
+        height: 190px;
+        transform: translate(450%, 300%);
+        z-index: 2;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        animation: scale 2s ease-in-out infinite;
+      }
+      
+      @keyframes scale {
+        0% {
+          transform: translate(-50%, -50%) scale(1);
+        }
+        50% {
+          transform: translate(-50%, -50%) scale(1.2);
+        }
+        100% {
+          transform: translate(-50%, -50%) scale(1);
+        }
+      }
+      .line {
+        position: fixed;
+      left: 0px;
+      top: 0px;
+      height: 400px;
+      width: 1920px;
+      transform: translateY(-200px);
+      margin-top: -150px;
+      animation: move-down 1s ease-out;
+    }
+    
+    @keyframes move-down {
+      0% {
+        transform: translateY(-10vw);
+      }
+      50% {
+        transform: translateY(60px);
+      }
+      }
+      
+    
+@media only screen and (width: 1440px) and (height: 900px) {
+  .text-center {
+
+    transform: translate(450%, 300%);
+    z-index: 2;
+    position: fixed;
+    top:-85px;
+    left: 530px;
+    font-size: 60px;
+    transform: translateY(480px);
+    animation: move-down 1s ease-out;
+    margin-top: -20vw;
+  }
+
+  @keyframes move-down {
+    0% {
+      transform: translateY(-10vw);
+    }
+    50% {
+      transform: translateY(1px);
+    }
+  }
+  }
+  
+  .game {
+    width: 190px;
+    height: 190px;
+    transform: translate(450%, 300%);
+    z-index: 2;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    animation: scale 2s ease-in-out infinite;
+  }
+  
+  @keyframes scale {
+    0% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+  .line {
+    position: fixed;
+  left: 0px;
+  top: 0px;
+  height: 400px;
+  width: 1920px;
+  transform: translateY(-200px);
+  margin-top: -150px;
+  animation: move-down 1s ease-out;
+}
+
+@keyframes move-down {
+  0% {
+    transform: translateY(-10vw);
+  }
+  50% {
+    transform: translateY(60px);
+  }
+  }
+
+  @media only screen and (width: 1360px) and (height: 768px) {
+    .text-center {
+      transform: translate(450%, 300%);
+      z-index: 2;
+      position: fixed;
+      top:-100px;
+      left: 490px;
+      font-size: 60px;
+      transform: translateY(480px);
+      animation: move-down 1s ease-out;
+      margin-top: -20vw;
+    }
+  
+    @keyframes move-down {
+      0% {
+        transform: translateY(-10vw);
+      }
+      50% {
+        transform: translateY(1px);
+      }
+    }
+    }
+    
+    .game {
+      width: 190px;
+      height: 190px;
+      transform: translate(450%, 300%);
+      z-index: 2;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      animation: scale 2s ease-in-out infinite;
+    }
+    
+    @keyframes scale {
+      0% {
+        transform: translate(-50%, -50%) scale(1);
+      }
+      50% {
+        transform: translate(-50%, -50%) scale(1.2);
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+    .line {
+      position: fixed;
+    left: 0px;
+    top: 0px;
+    height: 400px;
+    width: 1920px;
+    transform: translateY(-200px);
+    margin-top: -150px;
+    animation: move-down 1s ease-out;
+  }
+  
+  @keyframes move-down {
+    0% {
+      transform: translateY(-10vw);
+    }
+    50% {
+      transform: translateY(60px);
+    }
+    }
+
+      @media only screen and (width: 1280px) and (height: 1024px) {
+        .text-center {
+          transform: translate(450%, 300%);
+          z-index: 2;
+          position: fixed;
+          top:-100px;
+          left: 450px;
+          font-size: 60px;
+          transform: translateY(480px);
+          animation: move-down 1s ease-out;
+          margin-top: -20vw;
+        }
+      
+        @keyframes move-down {
+          0% {
+            transform: translateY(-10vw);
+          }
+          50% {
+            transform: translateY(1px);
+          }
+        }
+        }
+        
+        .game {
+          width: 190px;
+          height: 190px;
+          transform: translate(450%, 300%);
+          z-index: 2;
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          animation: scale 2s ease-in-out infinite;
+        }
+        
+        @keyframes scale {
+          0% {
+            transform: translate(-50%, -50%) scale(1);
+          }
+          50% {
+            transform: translate(-50%, -50%) scale(1.2);
+          }
+          100% {
+            transform: translate(-50%, -50%) scale(1);
+          }
+        }
+        .line {
+          position: fixed;
+        left: 0px;
+        top: 0px;
+        height: 400px;
+        width: 1920px;
+        transform: translateY(-200px);
+        margin-top: -150px;
+        animation: move-down 1s ease-out;
+      }
+      
+      @keyframes move-down {
+        0% {
+          transform: translateY(-10vw);
+        }
+        50% {
+          transform: translateY(60px);
+        }
+        }
