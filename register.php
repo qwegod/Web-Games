@@ -1,7 +1,7 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "0926";
+$servername = "fdb1030.awardspace.net";
+$username = "4285564_site";
+$password = "09H/#Igz2{Gi643S";
 $dbname = "4285564_asdasd";
 
 // Creating a connection
