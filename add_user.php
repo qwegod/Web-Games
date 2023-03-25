@@ -1,5 +1,5 @@
 <?php
-require_once 'config.php';
+require_once 'register.php';
 
 // Проверяем, что данные формы регистрации отправлены методом POST
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
