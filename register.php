@@ -1,8 +1,8 @@
 <?php
-$servername = "fdb1030.awardspace.net";
-$username = "4285564_site";
-$password = "09H/#Igz2{Gi643S";
-$dbname = "4285564_site";
+$servername = "sql7.freemysqlhosting.net";
+$username = "sql7608520";
+$password = "bpCPIpaqcP";
+$dbname = "sql7608520";
 
 // Creating a connection
 $conn = new mysqli($servername, $username, $password, $dbname);
