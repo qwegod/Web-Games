@@ -19,11 +19,11 @@ error_reporting(E_ALL);
 require_once('add_user.php');
 
 // Проверка, была ли отправлена форма
-if (isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
+if (isset($_GET["username"]) && isset($_GET["password"])) {
   // Проверка заполнения полей имени пользователя и пароля
-  if (!empty($_POST["username"]) && !empty($_POST["password"])) {
-    $username = $conn->real_escape_string($_POST["username"]);
-    $password = $conn->real_escape_string($_POST["password"]);
+  if (!empty($_GET["username"]) && !empty($_GET["password"])) {
+    $username = $conn->real_escape_string($_GET["username"]);
+    $password = $conn->real_escape_string($_GET["password"]);
 
     // Хеширование пароля
     $password_hash = password_hash($password, PASSWORD_DEFAULT);
