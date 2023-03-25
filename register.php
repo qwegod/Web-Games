@@ -15,15 +15,15 @@ if ($conn->connect_error) {
 // Enable error reporting
 error_reporting(E_ALL);
 
-// Include the add_user.php script
-require_once('add_user.php');
+// Include the add_users.php script
+require_once('add_users.php');
 
 // Check if the form was submitted
-if ($_SERVER["REQUEST_METHOD"] == "GET") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Check if the username and password fields were filled
-  if (!empty($_GET["username"]) && !empty($_GET["password"])) {
-    $username = $conn->real_escape_string($_GET["username"]);
-    $password = $conn->real_escape_string($_GET["password"]);
+  if (!empty($_POST["username"]) && !empty($_POST["password"])) {
+    $username = $conn->real_escape_string($_POST["username"]);
+    $password = $conn->real_escape_string($_POST["password"]);
 
     // Hash the password
     $password_hash = password_hash($password, PASSWORD_DEFAULT);
