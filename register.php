@@ -19,7 +19,7 @@ error_reporting(E_ALL);
 require_once('add_user.php');
 
 // Проверка, была ли отправлена форма
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if (isset($_SERVER["REQUEST_METHOD"]) && $_SERVER["REQUEST_METHOD"] == "POST") {
   // Проверка заполнения полей имени пользователя и пароля
   if (!empty($_POST["username"]) && !empty($_POST["password"])) {
     $username = $conn->real_escape_string($_POST["username"]);
