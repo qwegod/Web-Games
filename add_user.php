@@ -1,7 +1,7 @@
 require_once 'register.php';
 
 // Проверяем, что данные формы регистрации отправлены методом GET
-if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   // Получаем данные из формы регистрации
   $username = $_GET['username'];
   $password = $_GET['password'];
