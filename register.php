@@ -4,46 +4,46 @@ $username = "sql7608520";
 $password = "bpCPIpaqcP";
 $dbname = "sql7608520";
 
-// Creating a connection
+// Создание соединения с базой данных
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Checking connection
+// Проверка соединения
 if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+  die("Ошибка соединения: " . $conn->connect_error);
 }
 
-// Enable error reporting
+// Включение отчета об ошибках
 error_reporting(E_ALL);
 
-// Include the add_user.php script
+// Включение файла add_user.php
 require_once('add_user.php');
 
-// Check if the form was submitted
+// Проверка, была ли отправлена форма
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  // Check if the username and password fields were filled
+  // Проверка заполнения полей имени пользователя и пароля
   if (!empty($_POST["username"]) && !empty($_POST["password"])) {
     $username = $conn->real_escape_string($_POST["username"]);
     $password = $conn->real_escape_string($_POST["password"]);
 
-    // Hash the password
+    // Хеширование пароля
     $password_hash = password_hash($password, PASSWORD_DEFAULT);
 
-    // Call the add_user function
+    // Вызов функции add_user
     $result = add_user($username, $password_hash, $conn);
 
-    // Check if the user was added successfully
+    // Проверка успешности добавления пользователя
     if ($result) {
-      // Redirect to a page with a successful registration message
+      // Перенаправление на страницу с сообщением об успешной регистрации
       header("Location: registration_successful.html");
       exit();
     } else {
-      echo "Error adding user.";
+      echo "Ошибка добавления пользователя.";
     }
   } else {
-    echo "Error: Please fill in both the username and password fields.";
+    echo "Ошибка: Пожалуйста, заполните поля имени пользователя и пароля.";
   }
 }
 
-// Close the connection
+// Закрытие соединения
 $conn->close();
 ?>
