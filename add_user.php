@@ -1,10 +1,9 @@
-require_once 'register.php';
-
-// Проверяем, что данные формы регистрации отправлены методом GET
+<?php
+// Проверяем, что данные формы регистрации отправлены методом POST
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   // Получаем данные из формы регистрации
-  $username = $_GET['username'];
-  $password = $_GET['password'];
+  $username = $_POST['username'];
+  $password = $_POST['password'];
 
   // Добавляем информацию о пользователе в базу данных
   $sql = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
@@ -17,6 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
   mysqli_close($conn);
 } else {
-  // Если данные формы не отправлены методом GET, то выводим сообщение об ошибке
-  echo "Ошибка: данные формы не были отправлены методом GET";
+  // Если данные формы не отправлены методом POST, то выводим сообщение об ошибке
+  echo "Ошибка: данные формы не были отправлены методом POST";
 }
+?>
